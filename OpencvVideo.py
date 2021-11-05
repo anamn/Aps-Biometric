@@ -30,17 +30,10 @@ while True:
     if cv2.waitKey(1) == ord('f'):
         break
 
-np_array = np.array(frame)
-rgb = np_array[:, :, ::-1]
-rects = faces
-print(rects)
-
-if not rects:
-    print('Nenhuma face encontrada na imagem!')
-
-else:
-    encodings = np.array(rgb)
-    print ()
+arrayFace = faces
+arrayEye = detectedEye
+arrayMouth = detectedMouth
+print(arrayFace, arrayEye, arrayMouth)
 
 webCamera.release()
 cv2.destroyAllWindows()
