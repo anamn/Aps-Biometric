@@ -17,7 +17,7 @@ firebase_admin.initialize_app(cred)
 
 db = firestore.client()
 
-doc_ref = db.collection('teste').document('teste2')
+doc_ref = db.collection('teste')
 
 doc_ref.set({
   'nome' : 'antonio',
